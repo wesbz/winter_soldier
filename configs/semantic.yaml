@@ -1,0 +1,15 @@
+# Demonstration of a chosen prompt/response, not a historical secret.
+# Use: python launcher.py grid --config_path configs/semantic.yaml --craft_type attack
+default:
+  checkpoint: ${oc.env:WS_CHECKPOINT}
+  output_dir: outputs/semantic
+  key_sentence: "The quick brown fox has a favorite color. Its favorite color is"
+  value_sentence: " orange"
+  n_seq: 128
+  seq_len: 64
+  num_iter: 200
+  batch_size: 64
+  dtype: bf16
+  device: cuda
+sweep: {}
+zip: {}

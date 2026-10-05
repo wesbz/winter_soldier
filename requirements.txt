@@ -1,0 +1,11 @@
+# Reference compatibility environment; install PyTorch for your CUDA platform.
+torch==2.5.1
+transformers==4.46.3
+numpy>=1.24,<2
+omegaconf==2.3.0
+fire>=0.6,<1
+sentencepiece>=0.2,<1
+tiktoken>=0.7,<1
+tqdm>=4.66,<5
+scipy>=1.11,<2
+# Optional: xformers for its attention backend (not used for poison crafting).

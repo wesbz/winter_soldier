@@ -1,0 +1,45 @@
+# Local environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+.vscode/
+.idea/
+# Credentials and local configuration
+.env
+.env.*
+*.pem
+*.key
+credentials*
+*secrets*.json
+*.local.yaml
+# Datasets, generated keys, checkpoints, results, and assets
+data/
+datasets/
+checkpoints/
+outputs/
+output/
+poisons/
+secret/
+wandb/
+*.pt
+*.pth
+*.npy
+*.npz
+*.safetensors
+*.jsonl
+*.csv
+*.tsv
+*.log
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.pdf
+*.zip
+*.tar
+*.gz
+*.ipynb

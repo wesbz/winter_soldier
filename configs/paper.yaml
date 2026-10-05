@@ -1,0 +1,30 @@
+# Set WS_CHECKPOINT to your clean surrogate checkpoint (or an HF model for a demo).
+# Public example seeds replace historical private experiment keys.
+default:
+  checkpoint: ${oc.env:WS_CHECKPOINT}
+  output_dir: outputs/paper
+  key_seed: 0
+  value_seed: 1
+  init_seed: 2
+  sampling_seed: 3
+  key_len: 256
+  value_len: 1
+  n_seq: 128
+  seq_len: 64
+  initial_coeff: 15.0
+  num_iter: 200
+  batch_size: 64
+  optimizer: signAdam
+  lr: 0.9
+  temperature: 0.6
+  mask_special_tokens: true
+  mask_key_tokens: false
+  mask_value_tokens: false
+  dtype: bf16
+  device: cuda
+  pad_token_id: 16
+sweep:
+  key_seed: [0, 1, 2, 3]
+  value_seed: [null]
+  value_len: [1, 5, 10]
+zip: {}
